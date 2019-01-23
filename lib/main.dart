@@ -76,12 +76,22 @@ class _MyHomePageState extends State<MyHomePage> {
           Text(record.name),
           FlatButton(
             onPressed: () =>
-                record.reference.updateData({'votes': record.votes + 1}),
+                Firestore.instance.runTransaction((transaction) async {
+                  final freshSnapshot = await transaction.get(record.reference);
+                  final fresh = Record.fromSnapshot(freshSnapshot);
+                  await transaction
+                      .update(record.reference, {'votes': fresh.votes + 1});
+                }),
             child: Text(record.votes.toString()),
           ),
           FlatButton(
             onPressed: () =>
-                record.reference.updateData({'test': record.test - 1}),
+                Firestore.instance.runTransaction((transaction) async {
+                  final freshSnapshot = await transaction.get(record.reference);
+                  final fresh = Record.fromSnapshot(freshSnapshot);
+                  await transaction
+                      .update(record.reference, {'test': fresh.test - 1});
+                }),
             child: Text(record.test.toString()),
           )
         ]),
