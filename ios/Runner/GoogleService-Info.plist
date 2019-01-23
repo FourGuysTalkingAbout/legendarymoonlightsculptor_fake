@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>616160289537-hmptjeaug33693qs8re4d2n5dkq1o2ca.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.616160289537-hmptjeaug33693qs8re4d2n5dkq1o2ca</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDrgWTztUlaMVfHjDYr38Azxi_CBeFl07s</string>
+	<key>GCM_SENDER_ID</key>
+	<string>616160289537</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.babyNames</string>
+	<key>PROJECT_ID</key>
+	<string>baby-names-app-db-b3aa3</string>
+	<key>STORAGE_BUCKET</key>
+	<string>baby-names-app-db-b3aa3.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:616160289537:ios:c5ccddac2e7c1dab</string>
+	<key>DATABASE_URL</key>
+	<string>https://baby-names-app-db-b3aa3.firebaseio.com</string>
+</dict>
+</plist>
