@@ -73,6 +73,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         child:
             Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+          _textFormField(),
           Text(record.name),
           FlatButton(
             onPressed: () =>
@@ -98,18 +99,25 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
     );
   }
+
+  Widget _textFormField() {
+    return TextFormField();
+  }
 }
 
 class Record {
+  final String inputtedName;
   final String name;
   final int votes;
   final int test;
   final DocumentReference reference;
 
   Record.fromMap(Map<String, dynamic> map, {this.reference})
-      : assert(map['name'] != null),
+      : assert(map['inputtedName'] != null),
+        assert(map['name'] != null),
         assert(map['votes'] != null),
         assert(map['test'] != null),
+        inputtedName = map['name'],
         name = map['name'],
         votes = map['votes'],
         test = map['test'];
@@ -118,5 +126,5 @@ class Record {
       : this.fromMap(snapshot.data, reference: snapshot.reference);
 
   @override
-  String toString() => "Record<$name:$votes>";
+  String toString() => "Record<$inputtedName:$name:$votes:$test>";
 }
